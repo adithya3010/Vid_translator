@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VidTrans - Smart Video Translator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>VidTrans - Smart Video Translator</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <label for="videoFile">Upload Video:</label>
+      <input type="file" id="videoFile" name="videoFile" required />
+
+      <label for="language">Select Language:</label>
+      <select id="language" name="language" required>
+        <option value="English">English</option>
+        <option value="Telugu">Telugu</option>
+        <option value="Hindi">Hindi</option>
+      </select>
+
+      <button type="submit">Translate</button>
+    </form>
+
+    <div id="status" style="margin-top: 20px; font-weight: bold;"></div>
+    <video id="translatedVideo" controls style="display: none; width: 100%; margin-top: 20px;"></video>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
